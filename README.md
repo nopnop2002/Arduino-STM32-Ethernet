@@ -96,7 +96,7 @@ See [here](https://www.arduino.cc/en/reference/ethernet).
 
 # Note
 - I has not been tested on a real W5200 controller.   
-- It cannot retrieve the MAC address from WIZ550io.   
+- It cannot retrieve the Internal MAC address from WIZ550io.   
 
 ---
 
