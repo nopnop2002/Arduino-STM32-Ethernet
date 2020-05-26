@@ -81,11 +81,11 @@ void EthernetClass::begin(uint8_t *mac_address, IPAddress local_ip, IPAddress dn
 
 (*2)Pull up when there is no RESET pin.
 
-__Note__:Keep jumper cables as short as possible.
+__Keep jumper cables as short as possible.__
 
-__Note__:STM32 uses [this](https://github.com/stm32duino/Arduino_Core_STM32) core library.
+__STM32 uses [this](https://github.com/stm32duino/Arduino_Core_STM32) core library.__
 
-__Note__:STM32 and DUE is NOT 5V tolerant.
+__STM32 and DUE is NOT 5V tolerant.__
 
 ---
 
