@@ -68,8 +68,10 @@ If you edit the **w5100.h** file, save it and re-compile your sketch.
 |STM32F303|PA7|PA6|PA5|PA4|RESET|PA9|
 |STM32F401|PA7|PA6|PA5|PA4|RESET|PA9|
 |STM32F411|PA7|PA6|PA5|PA4|RESET|PA9|
-|STM32F405|PB15|PB14|PB13|PA15|RESET|PB10|
-|STM32F407|PB5|PB4|PB3|PB6|RESET|PA9|
+|FEATHER_F405|PB15|PB14|PB13|PA15|RESET|PB10|
+|BLACK_F407|PB5|PB4|PB3|PB7(*3)|RESET|3.3V|
+|BLUE_F407VE_Mini|PB15|PB14|PB13|PB12|3.3V|PB10|
+|DIYMORE_F407VGT|PB5|PB4|PB3|PB6|3.3V|PB10|
 
 (*1)You can change SS pin.
 ```
@@ -80,6 +82,8 @@ void EthernetClass::begin(uint8_t *mac_address, IPAddress local_ip, IPAddress dn
 ```
 
 (*2)Pull up when there is no RESET pin.
+
+(*3)This port cannot be used because it is used with the onboard NRF24 connector.  
 
 __Keep jumper cables as short as possible.__
 
