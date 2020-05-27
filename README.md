@@ -83,7 +83,8 @@ void EthernetClass::begin(uint8_t *mac_address, IPAddress local_ip, IPAddress dn
 
 (*2)Pull up when there is no RESET pin.
 
-(*3)This port cannot be used because it is used with the onboard NRF24 connector.  
+(*3)This port cannot be used because it is used with the onboard NRF24 connector.
+You need to specify a different port.
 
 __Keep jumper cables as short as possible.__
 
