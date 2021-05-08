@@ -6,7 +6,7 @@ This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 [PlatformIO](https://github.com/platformio/platformio-core)
 
 # Software requirements
-Platformio will automatically install the required libraries.   
+PlatformIO will automatically install the required libraries.   
 Great!   
 
 # Hardware requirements
