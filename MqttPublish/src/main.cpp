@@ -138,7 +138,7 @@ void loop() {
     counter++;
     if (counter > INTERVAL) {
       ++value;
-      snprintf (payload, 75, "MQTT from STM32 %06d",value);
+      snprintf (payload, 75, "MQTT from %s %06d",PIOENV,value);
       Serial.print("Publish message: ");
       Serial.println(payload);
       if (!pubsubClient.publish(MQTT_TOPIC, payload) ) {
