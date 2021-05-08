@@ -6,7 +6,7 @@ cd MqttPublish
 pio run -t upload -e bluepill_f103c8 && pio device monitor -b 115200 -p /dev/ttyUSB0
 ```
 
-# MQTT Subscribe 
+# MQTT Subscribe using python
 ```
 chmod 777 mqtt_sub.sh
 ./mqtt_sub.sh
