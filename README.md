@@ -68,10 +68,10 @@ It is more stable when supplied from an external power source.
 ```
                         +----------+          +----------+            +----------+
                         |BluePill  |          |ST-LINK   |            |HOST      |
-                        |BlackPill |          |          +------------+          |
-                        |          |----------|SWD-IO    |    USB     |          |
-                        |          |----------|SWD-CLK   |            |          |
-                        |          |----------|GND       +------------+          |
+                        |BlackPill |          |          [------------]          |
+                        |          |----------|SWD-IO    [    USB     ]          |
+                        |          |----------|SWD-CLK   [------------]          |
+                        |          |----------|GND       |            |          |
                         |          |----------|3V3       |            |          |
                         |          |          +----------+            |          |
                         |          |                                  |          |
@@ -80,10 +80,10 @@ It is more stable when supplied from an external power source.
 |          |---(MOSI)---|       GND|----------|GND       |            |          |
 |          |---(MISO)---|          |          |          |            |          |
 |          |---(SCLK)---|          |          |          |            |          |
-|          |---(SS)-----|          |          | USB-TTL  +------------+          |
-|          |---(RESET)--|          |          |          |   USB      |          |
-|          |---(GND)----|          |          |          |/dev/ttyUSB0|          |
-|   PHY    |            |          |          |          +------------+          |
+|          |---(SS)-----|          |          | USB-TTL  [------------]          |
+|          |---(RESET)--|          |          |          [   USB      ]          |
+|          |---(GND)----|          |          |          [/dev/ttyUSB0]          |
+|   PHY    |            |          |          |          [------------]          |
 |          |            +----------+          |          |            |          |
 |          |                                  |          |            |          |
 |          |            +----------+          |          |            |          |
