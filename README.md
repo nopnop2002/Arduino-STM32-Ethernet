@@ -47,8 +47,8 @@ It is more stable when supplied from an external power source.
 |          |---(SCLK)---|          |          |          |            |          |
 |          |---(SS)-----|          |          | USB-TTL  +------------+          |
 |          |---(RESET)--|          |          |          |   USB      |          |
-|          |---(RESET)--|          |          |          |/dev/ttyUSB0|          |
-|   PHY    |---(GND)----|          |          |          +------------+          |
+|          |---(GND)----|          |          |          |/dev/ttyUSB0|          |
+|   PHY    |            |          |          |          +------------+          |
 |          |            +----------+          |          |            |          |
 |          |                                  |          |            |          |
 |          |            +----------+          |          |            |          |
