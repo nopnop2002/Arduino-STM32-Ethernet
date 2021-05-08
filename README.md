@@ -1,15 +1,16 @@
 # Arduino-STM32-Ethernet
 Arduino stm32 example for W5x00 ethernet modules.   
-
-# W5x00 ethernet library for arduino
 This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
+
+# Development Environment
+[PlatformIO](https://github.com/platformio/platformio-core)
 
 # Selecting the Ethernet type controller (W5100, W5200 or W5500)
 It is automatically selected inside the library.
 
 # Wiring
 
-|PHY|STM32|
+|PHY|STM32||
 |:-:|:-:|:-:|
 |MOSI|PA7||
 |MISO|PA6||
@@ -30,24 +31,40 @@ STM32 development board cannot supply too much current.
 It is more stable when supplied from an external power source.
 
 ```
-+----------+            +----------+          +----------+
-|          |---(MOSI)---|          |          |          |
-|          |---(MISO)---|          |---<5V>---|          |
-|          |---(SCLK)---|  STM32   |          |          |
-|          |---(SS)-----| DEV BOARD|          |          |
-|          |---(RESET)--|          |---<GND>--|  POWER   |
-|   PHY    |---(GND)----|          |          |  SOURCE  |
-|          |            +----------+          |          |
-|          |                                  |          |
-|          |            +----------+          |          |
-|          |---(GND)----| 5v->3,3V |---<5V>---|          |
-|          |---(3.3V)---| Regulator|---<GND>--|          |
-+----------+            +----------+          +----------+
+                        +----------+          +----------+            +----------+
+                        |STM32     |          |ST-LINK   |            |HOST      |
+                        |DEV BOARD |          |          +------------+          |
+                        |          |----------|SWD-IO    |    USB     |          |
+                        |          |----------|SWD-CLK   |            |          |
+                        |          |----------|GND       +------------+          |
+                        |          |----------|3V3       |            |          |
+                        |          |          +----------+            |          |
+                        |          |                                  |          |
+                        |          |          +----------+            |          |
++----------+            |       PA9|----------|RX        |            |          |
+|          |---(MOSI)---|       GND|----------|GND       |            |          |
+|          |---(MISO)---|          |          |          |            |          |
+|          |---(SCLK)---|          |          |          |            |          |
+|          |---(SS)-----|          |          | USB-TTL  +------------+          |
+|          |---(RESET)--|          |          |          |   USB      |          |
+|          |---(RESET)--|          |          |          |/dev/ttyUSB0|          |
+|   PHY    |---(GND)----|          |          |          +------------+          |
+|          |            +----------+          |          |            |          |
+|          |                                  |          |            |          |
+|          |            +----------+          |          |            |          |
+|          |---(GND)----| 5v->3,3V |---<5V>---|          |            |          |
+|          |---(3.3V)---| Regulator|---<GND>--|          |            |          |
++----------+            +----------+          +----------+            +----------+
 ```
 
 
-# API & Examples
-See [here](https://www.arduino.cc/en/reference/ethernet).
+# Build
+```
+git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
+cd Arduino-STM32-Ethernet
+cd DhcpAddressPrinter
+pio run -t upload -e bluepill_f103c8 && pio device monitor -b 115200 -p /dev/ttyUSB0
+```
 
 ---
 
