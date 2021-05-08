@@ -14,6 +14,7 @@ This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 - External Voltage Regurator   
  BluePill or BlackPill board cannot supply too much current.   
  It is more stable when supplied from an external power source.   
+ AMS1117 is often used.   
  
 # Selecting the Ethernet type controller (W5100, W5200 or W5500)
 It is automatically selected inside the library.
