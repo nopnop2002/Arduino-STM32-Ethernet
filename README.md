@@ -5,6 +5,14 @@ This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 # Development Environment
 [PlatformIO](https://github.com/platformio/platformio-core)
 
+# Hardware requirements
+- STM32F103 Development Board
+- ST-LINK/V2 or ST-LINK/V2.1 Module
+- USB-TTL Converter
+- External Voltage Regurator
+ BluePill or BlackPill board cannot supply too much current.   
+ It is more stable when supplied from an external power source.   
+ 
 # Selecting the Ethernet type controller (W5100, W5200 or W5500)
 It is automatically selected inside the library.
 
@@ -27,13 +35,13 @@ You can specify any pin in platformio.ini.
 Pull up when there is no RESET pin.
 
 (*3)  
-STM32 development board cannot supply too much current.
+BluePill or BlackPill board cannot supply too much current.
 It is more stable when supplied from an external power source.
 
 ```
                         +----------+          +----------+            +----------+
-                        |STM32     |          |ST-LINK   |            |HOST      |
-                        |DEV BOARD |          |          +------------+          |
+                        |BluePill  |          |ST-LINK   |            |HOST      |
+                        |BlackPill |          |          +------------+          |
                         |          |----------|SWD-IO    |    USB     |          |
                         |          |----------|SWD-CLK   |            |          |
                         |          |----------|GND       +------------+          |
