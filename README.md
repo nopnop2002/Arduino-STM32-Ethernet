@@ -75,5 +75,5 @@ pio run -t upload -e bluepill_f103c8 && pio device monitor -b 115200 -p /dev/tty
 ---
 
 # More information
-See [here](https://github.com/Serasidis/Ethernet_STM).
+See [here](https://www.arduino.cc/en/Reference/Ethernet).
 
