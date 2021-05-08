@@ -5,6 +5,10 @@ This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 # Development Environment
 [PlatformIO](https://github.com/platformio/platformio-core)
 
+# Software requirements
+Platformio will automatically install the required libraries.   
+Great!   
+
 # Hardware requirements
 - STM32F103 Development Board   
 - ST-LINK/V2 or ST-LINK/V2.1 Module   
