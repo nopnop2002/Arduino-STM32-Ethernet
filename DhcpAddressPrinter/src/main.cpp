@@ -2,7 +2,6 @@
  * W5500 Ethernet Module DHCP-based IP printer.
  */
 
-#include "Arduino.h"
 #include <SPI.h>
 #include <Ethernet.h>
 

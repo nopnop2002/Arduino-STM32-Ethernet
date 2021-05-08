@@ -7,7 +7,6 @@
  * see http://en.wikipedia.org/wiki/Network_Time_Protocol
  */
 
-#include "Arduino.h"
 #include <SPI.h>
 #include <Ethernet.h>
 #include <EthernetUdp.h>

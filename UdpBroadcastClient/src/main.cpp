@@ -2,7 +2,6 @@
  * W5500 Ethernet Module UDP Broadcast Client example.
  */
 
-#include "Arduino.h"
 #include <SPI.h>
 #include <Ethernet.h>
 #include <EthernetUdp.h>

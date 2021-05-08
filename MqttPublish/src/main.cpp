@@ -2,7 +2,6 @@
  * W5500 Ethernet Module MQTT Publish example.
  */
 
-#include "Arduino.h"
 #include <SPI.h>
 #include <Ethernet.h>
 #include <PubSubClient.h>
