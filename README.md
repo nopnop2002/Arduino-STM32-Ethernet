@@ -1,5 +1,6 @@
 # Arduino-STM32-Ethernet
-Arduino stm32 support files for W5x00 ethernet modules.
+Arduino stm32 support files for W5x00 ethernet modules.   
+__This library is no longer going to be used, since the [official Arduino library](https://github.com/arduino-libraries/Ethernet) has been updated and works great.__
 
 I ported from [here](https://github.com/Serasidis/Ethernet_STM).
 
