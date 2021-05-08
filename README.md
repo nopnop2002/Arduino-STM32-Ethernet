@@ -6,10 +6,11 @@ This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 [PlatformIO](https://github.com/platformio/platformio-core)
 
 # Hardware requirements
-- STM32F103 Development Board
-- ST-LINK/V2 or ST-LINK/V2.1 Module
-- USB-TTL Converter
-- External Voltage Regurator
+- STM32F103 Development Board   
+- ST-LINK/V2 or ST-LINK/V2.1 Module   
+ You can use NECLEO board as ST-LINK/V2.1   
+- USB-TTL Converter   
+- External Voltage Regurator   
  BluePill or BlackPill board cannot supply too much current.   
  It is more stable when supplied from an external power source.   
  
