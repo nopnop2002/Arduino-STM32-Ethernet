@@ -1,5 +1,3 @@
-UDP Broadcast Client
-
 # Build
 ```
 git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
