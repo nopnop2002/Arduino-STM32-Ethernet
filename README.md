@@ -26,7 +26,7 @@ $ pip3 install -U platformio
 ```
 
 # Software requirements
-PlatformIO will automatically install the required libraries.   
+PlatformIO will automatically install the required libraries according to the ini file.   
 Great!   
 
 # Hardware requirements
