@@ -98,7 +98,7 @@ It is more stable when supplied from an external power source.
 +----------+            +----------+          +----------+            +----------+
 ```
 
-- Supplied from USB-TTL
+- Supplied from USB-TTL(Without farmware flash)
 ```
                         +----------+          +----------+            +----------+
                         |BluePill  |          |USB-TTL   |            |HOST      |
