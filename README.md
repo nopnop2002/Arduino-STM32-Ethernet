@@ -70,6 +70,7 @@ Pull up when there is no RESET pin.
 BluePill or BlackPill board cannot supply too much current.
 It is more stable when supplied from an external power source.
 
+- Supplied from ST-LINK
 ```
                         +----------+          +----------+            +----------+
                         |BluePill  |          |ST-LINK   |            |HOST      |
@@ -87,13 +88,41 @@ It is more stable when supplied from an external power source.
 |          |---(SCLK)---|          |          |          |            |          |
 |          |---(SS)-----|          |          | USB-TTL  [------------]          |
 |          |---(RESET)--|          |          |          [   USB      ]          |
-|          |---(GND)----|          |          |          [/dev/ttyUSB0]          |
+|          |            |          |          |          [/dev/ttyUSB0]          |
 |   PHY    |            |          |          |          [------------]          |
 |          |            +----------+          |          |            |          |
 |          |                                  |          |            |          |
 |          |            +----------+          |          |            |          |
 |          |---(3V3)----|5v->3.3V  |---(5V)---|          |            |          |
 |          |---(GND)----|Regulator |---(GND)--|          |            |          |
++----------+            +----------+          +----------+            +----------+
+```
+
+- Supplied from USB-TTL
+```
+                        +----------+          +----------+            +----------+
+                        |BluePill  |          |USB-TTL   |            |HOST      |
+                        |BlackPill |          |          [------------]          |
+                        |          |---(5V)---|          [    USB     ]          |
+                        |          |---(GND)--|          [------------]          |
+                        |          |          |          |            |          |
+                        |          |          |          |            |          |
+                        |          |          |          |            |          |
+                        |          |          |          |            |          |
+                        |          |          |          |            |          |
++----------+            |       PA9|----------|RX        |            |          |
+|          |---(MOSI)---|          |          |          |            |          |
+|          |---(MISO)---|          |          |          |            |          |
+|          |---(SCLK)---|          |          |          |            |          |
+|          |---(SS)-----|          |------+   |          |            |          |
+|          |---(RESET)--|          |--+   |   |          |            |          |
+|          |            |          |  |   |   |          |            |          |
+|   PHY    |            |          |  | (GND) |          |            |          |
+|          |            +----------+ (5V) |   |          |            |          |
+|          |                          |   |   |          |            |          |
+|          |            +----------+  |   |   |          |            |          |
+|          |---(3V3)----|5v->3.3V  |--+   |   |          |            |          |
+|          |---(GND)----|Regulator |------+   |          |            |          |
 +----------+            +----------+          +----------+            +----------+
 ```
 
