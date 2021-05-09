@@ -31,7 +31,12 @@ Great!
 
 # Hardware requirements
 - STM32F103 Development Board   
+- W5100/W5200/W5500 Ethernet Module   
+ About $5 for aliexpress/eBay.   
+ W5100 is for 5V only.   
+ W5500 can be used at both 3.3V / 5V.   
 - ST-LINK/V2 or ST-LINK/V2.1 Module   
+ About $5 for aliexpress/eBay.   
  You can use NECLEO board as ST-LINK/V2.1   
 - USB-TTL Converter   
  For Serial monitoring.   
