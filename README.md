@@ -2,32 +2,33 @@
 Arduino stm32 example for W5x00 ethernet modules.   
 This project uses [this](https://github.com/arduino-libraries/Ethernet) library.
 
-# Development Environment
-[PlatformIO](https://github.com/platformio/platformio-core)
-```
-$ python --version
-Python 3.7.3
-
-$ sudo apt install python3-pip python3-setuptools
-
-$ python -m pip -V
-pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
-
-The pip installed by apt is old, so update to the latest.
-$ python -m pip install -U pip
-
-$ python -m pip -V
-pip 20.3.1 from /home/orangepi/.local/lib/python3.7/site-packages/pip (python 3.7)
-
-wheel also updated.
-$ python -m pip install -U wheel
-
-$ pip3 install -U platformio
-```
 
 # Software requirements
 PlatformIO will automatically install the required libraries according to the ini file.   
 Great!   
+
+# Platform IO installation
+[PlatformIO](https://github.com/platformio/platformio-core)
+```
+$ python3 --version
+Python 3.7.3
+
+$ sudo apt install python3-pip python3-setuptools
+
+$ python3 -m pip -V
+pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
+
+The pip installed by apt is old, so update to the latest.
+$ python3 -m pip install -U pip
+
+$ python3 -m pip -V
+pip 20.3.1 from /home/orangepi/.local/lib/python3.7/site-packages/pip (python 3.7)
+
+Update wheels.
+$ python3 -m pip install -U wheel
+
+$ pip3 install -U platformio
+```
 
 # Hardware requirements
 - STM32F103 Development Board   
