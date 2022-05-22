@@ -91,7 +91,7 @@ void loop() {
     lastSendPacketTime = now;
     Udp.beginPacket("255.255.255.255", REMOTE_PORT);
     byte packetBuffer[64];
-    sprintf((char *)packetBuffer, "Hello %s %ld", PIOENV, millis());
+    sprintf((char *)packetBuffer, "Hello World %ld", millis());
     size_t packetSize = strlen((char*)packetBuffer);
     Udp.write(packetBuffer, packetSize);
     Udp.endPacket();

@@ -99,6 +99,34 @@ It is more stable when supplied from an external power source.
 +----------+            +----------+            +----------+            +----------+
 ```
 
+- Supplied from USB
+```
+                        +----------+            +----------+            +----------+
+                        |BluePill  |            |ST-LINK   |            |HOST      |
+                        |BlackPill |            |          [------------]          |
+                        |          |------------|SWD-IO    [    USB     ]          |
+                        |          |------------|SWD-CLK   [------------]          |
+                        |          |------------|GND       |            |          |
+                        |          |            |          |            |          |
+                        |          |            +----------+            |          |
+                        |          |                                    |          |
+                        |          [------------------------------------]          |
++----------+            |          [               USB                  ]          |
+|          |---(MOSI)---|          [------------------------------------]          |
+|          |---(MISO)---|          |                                    |          |
+|          |---(SCLK)---|          |                                    |          |
+|          |---(SS)-----|          |-------+                            |          |
+|          |---(RESET)--|          |---+   |                            |          |
+|          |            |          |   |   |                            |          |
+|   PHY    |            |          |   | (GND)                          |          |
+|          |            +----------+  (5V) |                            |          |
+|          |                           |   |                            |          |
+|          |            +----------+   |   |                            |          |
+|          |---(3V3)----|5v->3.3V  |---+   |                            |          |
+|          |---(GND)----|Regulator |-------+                            |          |
++----------+            +----------+                                    +----------+
+```
+
 - Supplied from USB-TTL(Without firmware flash)
 ```
                         +----------+            +----------+            +----------+
@@ -127,50 +155,56 @@ It is more stable when supplied from an external power source.
 +----------+            +----------+            +----------+            +----------+
 ```
 
-- Supplied from USB Port(Without firmware flash, Without Serial Monitor)
+- Supplied from USB Port(Without firmware flash)
 ```
-                        +----------+            +----------+
-                        |BluePill  |            |HOST      |
-                        |BlackPill [------------]          |
-                        |          [    USB     ]          |
-                        |          [------------]          |
-                        |          |            |          |
-                        |          |            |          |
-                        |          |            |          |
-                        |          |            |          |
-                        |          |            |          |
-+----------+            |          |            |          |
-|          |---(MOSI)---|          |            |          |
-|          |---(MISO)---|          |            |          |
-|          |---(SCLK)---|          |            |          |
-|          |---(SS)-----|          |-------+    |          |
-|          |---(RESET)--|          |---+   |    |          |
-|          |            |          |   |   |    |          |
-|   PHY    |            |          |   | (GND)  |          |
-|          |            +----------+  (5V) |    |          |
-|          |                           |   |    |          |
-|          |            +----------+   |   |    |          |
-|          |---(3V3)----|5v->3.3V  |---+   |    |          |
-|          |---(GND)----|Regulator |-------+    |          |
-+----------+            +----------+            +----------+
+                        +----------+                                    +----------+
+                        |BluePill  |                                    |HOST      |
+                        |BlackPill [------------------------------------]          |
+                        |          [                USB                 ]          |
+                        |          [------------------------------------]          |
+                        |          |                                    |          |
+                        |          |                                    |          |
+                        |          |                                    |          |
+                        |          |                                    |          |
+                        |          |                                    |          |
++----------+            |          |                                    |          |
+|          |---(MOSI)---|          |                                    |          |
+|          |---(MISO)---|          |                                    |          |
+|          |---(SCLK)---|          |                                    |          |
+|          |---(SS)-----|          |-------+                            |          |
+|          |---(RESET)--|          |---+   |                            |          |
+|          |            |          |   |   |                            |          |
+|   PHY    |            |          |   | (GND)                          |          |
+|          |            +----------+  (5V) |                            |          |
+|          |                           |   |                            |          |
+|          |            +----------+   |   |                            |          |
+|          |---(3V3)----|5v->3.3V  |---+   |                            |          |
+|          |---(GND)----|Regulator |-------+                            |          |
++----------+            +----------+                                    +----------+
 ```
 
 
-# Build
+# Using USB-TTL converter   
+Serial.print goto PA9.
 ```
 git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
-cd Arduino-STM32-Ethernet
-cd DhcpAddressPrinter
-pio run -t upload -e bluepill_f103c8 && pio device monitor -b 115200 -p /dev/ttyUSB0
+cd Arduino-STM32-Ethernet/DhcpAddressPrinter
+pio run -t upload -e bluepill_f103c8
 ```
 
----
+# Using STM Virtual COM port   
+Serial.print goto USB CIM port.   
+/dev/ttyACM0 may be change.   
+```
+git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
+cd Arduino-STM32-Ethernet/DhcpAddressPrinter
+pio run -e bluepill_f103c8_usbcon -t upload && pio device monitor -b 115200 -p /dev/ttyACM0
+```
 
 # Note
 - I has not been tested on a real W5200 controller.   
 - It cannot retrieve the Internal MAC address from WIZ550io.   
 
----
 
 # More information
 See [here](https://www.arduino.cc/en/Reference/Ethernet).

@@ -6,8 +6,7 @@
 #include <Ethernet.h>
 #include <PubSubClient.h>
 
-#define MQTT_SERVER     "broker.hivemq.com"
-//#define MQTT_SERVER     "iot.eclipse.org"
+//#define MQTT_SERVER     "broker.hivemq.com"
 #define MQTT_PORT       1883
 #define MQTT_TOPIC      "/arduino/STM32"
 #define MQTT_WILL_TOPIC "/arduino/STM32"

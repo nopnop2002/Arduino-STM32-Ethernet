@@ -7,8 +7,7 @@
 #include <PubSubClient.h>
 
 #define INTERVAL        10 // Publish Interval [Seconds]
-#define MQTT_SERVER     "broker.hivemq.com"
-//#define MQTT_SERVER     "iot.eclipse.org"
+//#define MQTT_SERVER     "broker.hivemq.com"
 #define MQTT_PORT       1883
 #define MQTT_TOPIC      "/arduino/STM32"
 #define MQTT_WILL_TOPIC "/arduino/STM32"
@@ -99,6 +98,9 @@ void setup() {
   Serial.print("Ethernet.dnsServerIP: ");
   Serial.println(Ethernet.dnsServerIP());
 
+  Serial.print("broker is ");
+  Serial.println(MQTT_SERVER);
+
   char clientid[30];
   IPAddress ip = Ethernet.localIP();
   sprintf(clientid,"%03d-%03d-%03d-%03d",ip[0], ip[1], ip[2], ip[3]);
@@ -128,7 +130,6 @@ void setup() {
 
 void loop() {
   static int counter = INTERVAL;
-  static int value = 0;
   char payload[50];
 
   pubsubClient.loop();
@@ -137,11 +138,9 @@ void loop() {
     lastMillis = now;
     counter++;
     if (counter > INTERVAL) {
-      ++value;
-      snprintf (payload, 75, "MQTT from %s %06d",PIOENV,value);
       Serial.print("Publish message: ");
-      Serial.println(payload);
-      if (!pubsubClient.publish(MQTT_TOPIC, payload) ) {
+      Serial.println(MQTT_PAYLOAD);
+      if (!pubsubClient.publish(MQTT_TOPIC, MQTT_PAYLOAD) ) {
          errorDisplay("Failed to Publsh");
       }
       counter=0;

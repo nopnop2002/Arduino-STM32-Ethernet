@@ -20,10 +20,10 @@ byte mac[] = {
 };
 
 // Your NTP Server
-#define NTP_SERVER     "pool.ntp.org"
+//#define NTP_SERVER     "pool.ntp.org"
 
 // Your local time zone
-#define TIME_ZONE      9            
+//#define TIME_ZONE      9            
 
 // local port to listen for UDP packets
 #define LOCAL_PORT      8888
