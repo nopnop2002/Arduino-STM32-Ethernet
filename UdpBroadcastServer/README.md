@@ -6,8 +6,8 @@ cd Arduino-STM32-Ethernet/UdpBroadcastServer
 pio run -e bluepill_f103c8 -t upload
 ```
 
-# Using USB-TTL converter   
-Serial.print goto PA9.
+# Using STM Virtual COM port   
+Serial.print goto USB Virtual COM port.
 ```
 git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
 cd Arduino-STM32-Ethernet/UdpBroadcastServer
