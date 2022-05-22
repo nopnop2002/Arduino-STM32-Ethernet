@@ -15,4 +15,4 @@ pio run -e bluepill_f103c8_usbcon -t upload && pio device monitor -b 115200 -p /
 ```
 
 # Screen Shot
-![Screen_DhcpAddressPrinter](https://user-images.githubusercontent.com/6020549/169679095-23c92812-028b-4d48-93a4-cad2dbf763b8.jpg)
+![Screen_DhcpAddressPrinter](https://user-images.githubusercontent.com/6020549/169679491-367d3085-e57c-4595-af20-3ade5524b261.jpg)
