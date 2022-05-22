@@ -193,7 +193,7 @@ pio run -t upload -e bluepill_f103c8
 ```
 
 # Using STM Virtual COM port   
-Serial.print goto USB CIM port.   
+Serial.print goto USB Virtual COM port.   
 /dev/ttyACM0 may be change.   
 ```
 git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
