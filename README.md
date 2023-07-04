@@ -37,7 +37,8 @@ $ pip3 install -U platformio
  W5100 is for 5V only.   
  W5500 can be used at both 3.3V / 5V.   
 - ST-LINK/V2 or ST-LINK/V2.1 Module   
- Arduino-IDE only supports ST-LINK V2.1 adapters, but OpenOCD used by PlatformIO supports both V2.0 and V2.1.   
+ Arduino-IDE only supports ST-LINK V2.1 adapters.   
+ But OpenOCD used by PlatformIO supports both V2.0 and V2.1.   
  PlatformIO allows you to use cheap Chinese ST-LINK adapters.   
  You can get it at a low price (about $2).   
  You can use NECLEO board as ST-LINK/V2.1   
