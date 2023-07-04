@@ -39,11 +39,12 @@ $ pip3 install -U platformio
 - ST-LINK/V2 or ST-LINK/V2.1 Module   
  Arduino-IDE only supports ST-LINK V2.1 adapters, but OpenOCD used by PlatformIO supports both V2.0 and V2.1.   
  PlatformIO allows you to use cheap Chinese ST-LINK adapters.   
- You can get it at a low price (about $2).
+ You can get it at a low price (about $2).   
  You can use NECLEO board as ST-LINK/V2.1   
 - USB-TTL Converter   
  For Serial monitoring.   
 - External Voltage Regurator   
+ W5x00 ethernet modules require a lot of current.   
  BluePill or BlackPill board cannot supply too much current.   
  It is more stable when supplied from an external power source.   
  AMS1117 is often used.   
