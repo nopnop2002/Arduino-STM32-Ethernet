@@ -18,13 +18,13 @@ $ sudo apt install python3-pip python3-setuptools
 $ python3 -m pip -V
 pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
 
-The pip installed by apt is old, so update to the latest.
+# pip installed by apt is old, so update to the latest.
 $ python3 -m pip install -U pip
 
 $ python3 -m pip -V
 pip 20.3.1 from /home/orangepi/.local/lib/python3.7/site-packages/pip (python 3.7)
 
-Update wheels.
+# Update wheels.
 $ python3 -m pip install -U wheel
 
 $ pip3 install -U platformio
@@ -37,7 +37,9 @@ $ pip3 install -U platformio
  W5100 is for 5V only.   
  W5500 can be used at both 3.3V / 5V.   
 - ST-LINK/V2 or ST-LINK/V2.1 Module   
- About $5 for aliexpress/eBay.   
+ Arduino-IDE only supports ST-LINK V2.1 adapters, but OpenOCD used by PlatformIO supports both V2.0 and V2.1.   
+ PlatformIO allows you to use cheap Chinese ST-LINK adapters.   
+ You can get it at a low price (about $2).
  You can use NECLEO board as ST-LINK/V2.1   
 - USB-TTL Converter   
  For Serial monitoring.   
