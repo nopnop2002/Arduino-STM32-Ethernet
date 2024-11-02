@@ -199,8 +199,8 @@ pio run -t upload -e bluepill_f103c8
 ```
 
 # Using STM Virtual COM port   
-Serial.print goto USB Virtual COM port.   
-/dev/ttyACM0 may be change.   
+Serial.print is output to the USB virtual COM port.   
+/dev/ttyACM0 may change.   
 ```
 git clone https://github.com/nopnop2002/Arduino-STM32-Ethernet
 cd Arduino-STM32-Ethernet/DhcpAddressPrinter
